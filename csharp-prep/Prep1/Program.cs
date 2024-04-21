@@ -7,12 +7,12 @@ class Program
         Console.WriteLine("Hello Prep1 World!");
 
         Console.WriteLine("Tell me your first name, please? ");
-        String FirstName = Console.ReadLine();
+        String firstName = Console.ReadLine();
 
         Console.WriteLine("Tell me your last name, please? ");
-        String LastName = Console.ReadLine();
+        String lastName = Console.ReadLine();
 
-        Console.WriteLine($"Your name is {LastName}, {FirstName} {LastName}.");
+        Console.WriteLine($"Your name is {lastName}, {firstName} {lastName}.");
 
         
     }
