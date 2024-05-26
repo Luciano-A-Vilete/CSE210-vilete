@@ -1,0 +1,52 @@
+Activity (abstract)
+|
+├─── Attributes
+|    ├── Date : DateTime { get; private set; }
+|    └── Minutes : double { get; private set; }
+|
+├─── Methods
+|    ├── Activity(DateTime date, double minutes)
+|    ├── GetDistance() : abstract double
+|    ├── GetSpeed() : abstract double
+|    ├── GetPace() : abstract double
+|    └── GetSummary() : virtual string
+|
+├─── Cycling (inherits Activity)
+|    |
+|    ├─── Attributes
+|    |    └── SpeedInKilometersPerHour : double { get; private set; }
+|    |
+|    ├─── Methods
+|         ├── Cycling(DateTime date, double minutes, double speed)
+|         ├── GetDistance() : override double
+|         ├── GetSpeed() : override double
+|         ├── GetPace() : override double
+|         ├── CalculateDistanceInKilometers() : double
+|         └── CalculatePaceInMinutesPerKilometer() : double
+|
+├─── Running (inherits Activity)
+|    |
+|    ├─── Attributes
+|    |    └── SpeedInKilometersPerHour : double { get; private set; }
+|    |
+|    ├─── Methods
+|         ├── Running(DateTime date, double minutes, double speed)
+|         ├── GetDistance() : override double
+|         ├── GetSpeed() : override double
+|         ├── GetPace() : override double
+|         ├── CalculateDistanceInKilometers() : double
+|         └── CalculatePaceInMinutesPerKilometer() : double
+|
+└─── Swimming (inherits Activity)
+     |
+     ├─── Attributes
+     |    └── NumberOfLaps : int { get; private set; }
+     |
+     ├─── Methods
+          ├── Swimming(DateTime date, double minutes, int numberOfLaps)
+          ├── GetDistance() : override double
+          ├── GetSpeed() : override double
+          ├── GetPace() : override double
+          ├── CalculateDistanceInKilometers() : double
+          ├── CalculateSpeedInKilometersPerHour() : double
+          └── CalculatePaceInMinutesPerKilometer() : double

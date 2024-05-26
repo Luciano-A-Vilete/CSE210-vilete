@@ -1,0 +1,41 @@
+Address
+|
+├─── Attributes
+|    ├── _street : string
+|    ├── _city : string
+|    ├── _state : string
+|    └── _zip : string
+|
+├─── Methods
+     ├── Address(string street, string city, string state, string zip)
+     └── ToString() : string
+
+Event (abstract)
+|
+├─── Attributes
+|    ├── _title : string
+|    ├── _description : string
+|    ├── _date : DateTime
+|    ├── _time : string
+|    └── _address : Address
+|
+├─── Protected Properties
+|    ├── Title : string { get; }
+|    └── Date : DateTime { get; }
+|
+├─── Methods
+|    ├── Event(string title, string description, DateTime date, string time, Address address)
+|    ├── GetStandardDetails() : string
+|    ├── GetFullDetails() : abstract string
+|    └── GetShortDescription() : abstract string
+
+Lecture (inherits Event)
+|
+├─── Attributes
+|    ├── _speaker : string
+|    └── _capacity : int
+|
+├─── Methods
+     ├── Lecture(string title, string description, DateTime date, string time, Address address, string speaker, int capacity)
+     ├── GetFullDetails() : override string
+     └── GetShortDescription() : override string

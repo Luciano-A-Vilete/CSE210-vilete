@@ -1,0 +1,25 @@
+Program
+|
+|__ Main() : void
+|
+|__ CreateVideos() : List<Video>
+|
+|__ DisplayVideoDetails(videos : List<Video>) : void
+
+Video
+|
+|__ Title : string
+|
+|__ Author : string
+|
+|__ Length : int
+|
+|__ Comments : List<Comment>
+|
+|__ GetNumberOfComments() : int
+
+Comment
+|
+|__ UserName : string
+|
+|__ Text : string

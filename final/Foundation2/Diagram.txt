@@ -1,0 +1,60 @@
+Program
+|
+├─── Address
+|    |
+|    ├─── Attributes
+|    |    ├── _streetAddress : string
+|    |    ├── _city : string
+|    |    ├── _state : string
+|    |    └── _country : string
+|    |
+|    ├─── Methods
+|         ├── Address(string streetAddress, string city, string state, string country)
+|         ├── StreetAddress : string { get; set; }
+|         ├── City : string { get; set; }
+|         ├── State : string { get; set; }
+|         ├── Country : string { get; set; }
+|         ├── IsInUSA() : bool
+|         └── ToString() : string
+|
+├─── Customer
+|    |
+|    ├─── Attributes
+|    |    ├── _name : string
+|    |    └── _address : Address
+|    |
+|    ├─── Methods
+|         ├── Customer(string name, Address address)
+|         ├── Name : string { get; set; }
+|         ├── Address : Address { get; set; }
+|         └── LivesInUSA() : bool
+|
+├─── Order
+|    |
+|    ├─── Attributes
+|    |    ├── _products : List<Product>
+|    |    └── _customer : Customer
+|    |
+|    ├─── Methods
+|         ├── Order(List<Product> products, Customer customer)
+|         ├── Products : List<Product> { get; set; }
+|         ├── Customer : Customer { get; set; }
+|         ├── TotalCost() : double
+|         ├── PackingLabel() : string
+|         └── ShippingLabel() : string
+|
+└─── Product
+     |
+     ├─── Attributes
+     |    ├── _name : string
+     |    ├── _productId : int
+     |    ├── _price : double
+     |    └── _quantity : int
+     |
+     ├─── Methods
+          ├── Product(string name, int productId, double price, int quantity)
+          ├── Name : string { get; set; }
+          ├── ProductId : int { get; set; }
+          ├── Price : double { get; set; }
+          ├── Quantity : int { get; set; }
+          └── TotalCost() : double
